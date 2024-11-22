@@ -1,0 +1,104 @@
+/* Navbar container with a stylish fixed position */
+.nav-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+  padding: 12px 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for each navigation link */
+.nav-link {
+  padding: 10px 15px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  /* background: linear-gradient(135deg, #ff7e5f, #feb47b); */
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  box-shadow: 0 8px 20px rgba(255, 126, 95, 0.5);
+}
+
+/* Active link state */
+.active-link {
+  border: 2px solid #fff;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5);
+  transform: scale(1.15);
+}
+
+/* Cart icon and count styling */
+.cart-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cart-icon {
+  font-size: 1.8rem;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+  transform: scale(1.1);
+  color: #ff7e5f;
+}
+
+.cart-count {
+  position: absolute;
+  top: -12px;
+  right: 46px;
+  background-color: #ff5722;
+  color: black;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 5px 8px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: bounce 0.6s infinite alternate;
+}
+
+/* Bounce animation for cart count */
+@keyframes bounce {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.2);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .nav-container {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .nav-link {
+      padding: 10px 12px;
+  }
+
+  .cart-icon-container {
+      margin-top: 10px;
+  }
+}

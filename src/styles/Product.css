@@ -1,0 +1,127 @@
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    height: 100%;
+  }
+  
+  /* Main Product Container */
+  .product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Product Form Container */
+  .product-form-container {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Form Title */
+  .form-title {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form Inputs */
+  .form-input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #ff5722;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
+  }
+  
+  /* Submit Button */
+  .submit-button {
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #ff5722, #e64a19);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  .submit-button:hover {
+    background: linear-gradient(135deg, #e64a19, #ff5722);
+    transform: translateY(-5px) scale(1.05);
+  }
+  
+  /* Form Container Shadow Effect */
+  .product-form-container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+    filter: blur(10px);
+    border-radius: 15px;
+  }
+  
+  /* Button Glow */
+  .submit-button {
+    box-shadow: 0 0 10px rgba(255, 87, 34, 0.7), 0 0 20px rgba(255, 87, 34, 0.7);
+  }
+  
+  .submit-button:hover {
+    box-shadow: 0 0 20px rgba(255, 87, 34, 1), 0 0 30px rgba(255, 87, 34, 0.9);
+  }
+  
+  /* Animation for Input Fields */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .form-input {
+    animation: slideIn 0.6s ease-in-out forwards;
+  }
+  
+  .submit-button {
+    animation: slideIn 0.8s ease-in-out forwards;
+  }
+  
